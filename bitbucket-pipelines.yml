@@ -3,7 +3,7 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: java:8
+image: uber/android-build-environment:latest 
 
 pipelines:
   default:
@@ -13,7 +13,4 @@ pipelines:
         script: # Modify the commands below to build your repository.
           # You must commit the Gradle wrapper to your repository
           # https://docs.gradle.org/current/userguide/gradle_wrapper.html
-          - bash mkdir "${ANDROID_HOME}/licenses" || true
-          - bash echo "8933bad161af4178b1185d1a37fbf41ea5269c55" > $ANDROID_HOME/licenses/android-sdk-license
-          - bash echo "d56f5187479451eabf01fb78af6dfcb131a6481e" > $ANDROID_HOME/licenses/android-sdk-license
           - bash ./gradlew build
