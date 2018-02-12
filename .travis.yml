@@ -2,8 +2,8 @@ language : android
 jdk : oraclejdk8
 env:
   global :
-    - ANROID_API_LEVEL = 25
-    - ANDROID_BUILD_TOOLS_VERSION = 25.0.2
+    - ANROID_API_LEVEL = 26
+    - ANDROID_BUILD_TOOLS_VERSION = 26.1.0
 android :
   components :
     - tools
@@ -23,3 +23,4 @@ before_script :
     - cp ./licenses/* "$ANDROID_HOME/licenses"
 script :
     - ./gradlew build check
+
