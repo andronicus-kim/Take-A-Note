@@ -1,3 +1,3 @@
 # Take-A-Note
 A simple note taking app 
-https://https://travis-ci.org/andronicus-kim/take-a-note.svg?branch=master)
+https://travis-ci.org/andronicus-kim/Take-A-Note.svg?branch=master
