@@ -25,8 +25,9 @@ script :
     - ./gradlew build check
 before_install:
     - chmod +x gradlew
-    - pip install --user codecov
 after_success:
+    - ./gradlew jacocoFullReport
+    - pip install --user codecov
     - codecov
 after_failure:
     - "cat $TRAVIS_BUILD_DIR/app/build/outputs/lint-results-debug.xml"
