@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.android.takeanote.data.Note;
 import com.example.android.takeanote.R;
@@ -51,7 +52,7 @@ public class NoteFragment extends Fragment implements NoteContract.View{
 
     @Override
     public void displayErrorMessage() {
-
+        Toast.makeText(getActivity(), "Display error message!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
