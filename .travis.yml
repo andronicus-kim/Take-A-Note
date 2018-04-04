@@ -23,10 +23,11 @@ before_script :
     - cp ./licenses/* "$ANDROID_HOME/licenses"
 script :
     - ./gradlew build check
+    - ./gradlew build jacocoTestReport
 before_install:
     - chmod +x gradlew
 after_success:
-    - ./gradlew jacocoFullReport
+    - bash <(curl -s https://codecov.io/bash)
     - pip install --user codecov
     - codecov
 after_failure:
