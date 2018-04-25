@@ -33,11 +33,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    testCompile 'org.mockito:mockito-core:2.8.9'
+    testImplementation 'org.mockito:mockito-core:2.8.9'
     // required if you want to use Mockito for Android tests
-    androidTestCompile 'org.mockito:mockito-android:2.7.22'
-    compile 'com.google.dagger:dagger:2.14.1'
+    androidTestImplementation 'org.mockito:mockito-android:2.7.22'
+    implementation 'com.google.dagger:dagger:2.14.1'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.14.1'
-    compile 'io.reactivex.rxjava2:rxjava:2.1.9'
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
 }
